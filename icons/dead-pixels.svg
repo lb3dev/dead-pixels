@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="255"
-   height="255"
-   viewBox="0 0 67.468749 67.468752"
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733335"
    version="1.1"
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
@@ -24,12 +24,12 @@
      inkscape:pageshadow="0"
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
-     inkscape:document-units="mm"
-     showgrid="false"
+     inkscape:document-units="px"
+     showgrid="true"
      units="px"
-     inkscape:zoom="4.3994184"
-     inkscape:cx="156.95256"
-     inkscape:cy="110.5828"
+     inkscape:zoom="3.1108586"
+     inkscape:cx="96.918581"
+     inkscape:cy="85.024759"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
@@ -39,7 +39,7 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-center="true"
-     width="255px">
+     width="256px">
     <inkscape:grid
        type="xygrid"
        id="grid13" />
@@ -51,23 +51,22 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g860"
-       transform="translate(-0.1322915,0.32837397)">
+       id="g889">
       <path
          id="rect39"
          style="fill:#1a1a1a;fill-rule:evenodd;stroke-width:0.705555"
-         d="M 12.700001,15.610416 H 55.033333 V 42.06875 H 12.700001 Z" />
+         d="M 12.700001,16.071081 H 55.033333 V 42.529415 H 12.700001 Z" />
       <path
          id="rect1520"
          style="fill:#442178;fill-opacity:1;fill-rule:evenodd;stroke-width:0.705554"
-         d="M 12.7,15.610416 V 42.068749 H 55.033333 V 15.610416 Z m 0.79375,0.79375 H 54.239583 V 41.274999 H 13.49375 Z" />
+         d="M 12.7,16.071081 V 42.529414 H 55.033333 V 16.071081 Z m 0.79375,0.79375 H 54.239584 V 41.735664 H 13.493751 Z" />
       <path
          id="rect1250"
          style="fill:#442178;fill-opacity:1;stroke-width:0.386448"
-         d="m 12.700001,39.422916 h 42.333332 v 2.645833 H 12.700001 Z" />
+         d="m 12.700001,39.883581 h 42.333332 v 2.645833 H 12.700001 Z" />
       <g
          id="g7914"
-         transform="matrix(0.8,0,0,1,6.7733333,1.8520832)"
+         transform="matrix(0.8,0,0,1,6.773334,2.3127484)"
          style="fill:#442178;fill-opacity:1">
         <path
            style="fill:#442178;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -79,15 +78,15 @@
            id="path7896" />
       </g>
       <rect
-         style="fill:#442178;fill-opacity:1;stroke:none;stroke-width:0.129727"
+         style="fill:#442178;fill-opacity:1;stroke:none;stroke-width:0.149045"
          id="rect7983"
          width="3.96875"
-         height="6.6145835"
+         height="8.7312498"
          x="31.882292"
-         y="42.06876" />
+         y="42.529423" />
       <g
          id="g4632"
-         transform="rotate(-45,54.832714,102.14542)"
+         transform="rotate(-45,55.388787,102.37575)"
          style="fill:#ffcc00;fill-opacity:1">
         <path
            id="path1767"
