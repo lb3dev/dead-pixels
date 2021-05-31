@@ -8,7 +8,7 @@ Build Notes
 
 Install pyinstaller dependencies with the requirements.txt in the project, and then build as one executable:
 
-``pyinstaller --onefile main.py``
+``pyinstaller --onefile --icon=icons/dead-pixels.ico -n dead-pixels main.py``
 
 Controls
 ---------
