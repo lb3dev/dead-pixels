@@ -10,7 +10,12 @@ Build Notes
 
 Install pyinstaller dependencies with the requirements.txt in the project, and then build as one executable:
 
-``pyinstaller --onefile --icon=icons/dead-pixels.ico -n dead-pixels main.py``
+``pyinstaller --onefile --windowed --add-data "icons/dead-pixels.ico;icons" --icon icons/dead-pixels.ico -n dead-pixels main.py``
+
+Convert png to .ico (with ImageMagick):
+
+``magick convert dead-pixels.png ( -clone 0 -resize 16x16 ) ( -clone 0 -resize 32x32 ) ( -clone 0 -resize 48x48 ) ( -clone 0 -resize 64x64 ) dead-pixels.ico``
+
 
 Controls
 ---------

@@ -1,3 +1,5 @@
+import os
+import sys
 import tkinter
 from collections import deque
 
@@ -14,8 +16,18 @@ def navigate_left(root):
     root.configure(background=colors[0])
 
 
+def get_resource_path(resource_path):
+    application_path = ''
+    if getattr(sys, 'frozen', False):
+        application_path = sys._MEIPASS
+    elif __file__:
+        application_path = os.path.dirname(__file__)
+    return os.path.join(application_path, resource_path)
+
+
 if __name__ == '__main__':
     root = tkinter.Tk()
+    root.iconbitmap(get_resource_path('icons/dead-pixels.ico'))
 
     root.attributes('-fullscreen', True)
     root.configure(background=colors[0])
