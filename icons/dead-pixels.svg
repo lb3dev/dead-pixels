@@ -27,9 +27,9 @@
      inkscape:document-units="px"
      showgrid="true"
      units="px"
-     inkscape:zoom="3.1108586"
-     inkscape:cx="96.918581"
-     inkscape:cy="85.024759"
+     inkscape:zoom="2.1997092"
+     inkscape:cx="51.143124"
+     inkscape:cy="58.416812"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
@@ -51,7 +51,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g889">
+       id="g889"
+       transform="matrix(1.6,0,0,1.6,-20.32,-20.319999)">
       <path
          id="rect39"
          style="fill:#1a1a1a;fill-rule:evenodd;stroke-width:0.705555"
