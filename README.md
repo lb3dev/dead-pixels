@@ -6,6 +6,8 @@ dead-pixels is a simple Python 3 program built to display full screen background
 Build Notes
 -----
 
+### Windows 10
+
 Install pyinstaller dependencies with the requirements.txt in the project, and then build as one executable:
 
 ``pyinstaller --onefile --icon=icons/dead-pixels.ico -n dead-pixels main.py``
