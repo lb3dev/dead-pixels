@@ -39,6 +39,12 @@ class ColorPanelsWidget(QWidget):
             self.rotate_right()
         event.accept()
 
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.rotate_right()
+        if event.button() == Qt.RightButton:
+            self.close()
+
     def rotate_left(self):
         self.colors.rotate(1)
         self.change_window_background()
