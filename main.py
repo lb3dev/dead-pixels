@@ -1,19 +1,10 @@
 import os
 import sys
-import tkinter
 from collections import deque
 
-colors = deque(['black', 'white', 'red', 'green', 'blue'])
-
-
-def navigate_right(root):
-    colors.rotate(-1)
-    root.configure(background=colors[0])
-
-
-def navigate_left(root):
-    colors.rotate(1)
-    root.configure(background=colors[0])
+from PyQt5 import QtGui
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import *
 
 
 def get_resource_path(resource_path):
@@ -25,24 +16,56 @@ def get_resource_path(resource_path):
     return os.path.join(application_path, resource_path)
 
 
+class ColorPanelsWidget(QWidget):
+
+    colors = deque([Qt.black, Qt.white, Qt.red, Qt.green, Qt.blue])
+
+    def __init__(self):
+        super(ColorPanelsWidget, self).__init__()
+        self.init_ui()
+
+    def init_ui(self):
+        self.change_window_background()
+        self.showFullScreen()
+        self.setWindowIcon(QtGui.QIcon(get_resource_path('icons/dead-pixels.png')))
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key == Qt.Key_Escape or key == Qt.Key_Q:
+            self.close()
+        if key == Qt.Key_A or key == Qt.Key_Left:
+            self.rotate_left()
+        if key == Qt.Key_D or key == Qt.Key_Right:
+            self.rotate_right()
+        event.accept()
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.rotate_right()
+        if event.button() == Qt.RightButton:
+            self.close()
+
+    def rotate_left(self):
+        self.colors.rotate(1)
+        self.change_window_background()
+
+    def rotate_right(self):
+        self.colors.rotate(-1)
+        self.change_window_background()
+
+    def change_window_background(self):
+        w_palette = self.palette()
+        w_palette.setColor(self.backgroundRole(), self.colors[0])
+        self.setPalette(w_palette)
+
+
 if __name__ == '__main__':
-    root = tkinter.Tk()
-    root.iconbitmap(get_resource_path('icons/dead-pixels.ico'))
+    app = QApplication([])
 
-    root.attributes('-fullscreen', True)
-    root.configure(background=colors[0])
+    # Use Fusion style for all OSs
+    app.setStyle('Fusion')
+    app.setApplicationName('Dead Pixels')
 
-    # A and Left Arrow keys to navigate left
-    root.bind('a', lambda x: navigate_left(root))
-    root.bind('<Left>', lambda x: navigate_left(root))
+    window = ColorPanelsWidget()
 
-    # D, Right Arrow, and Left Click to navigate right
-    root.bind('d', lambda x: navigate_right(root))
-    root.bind('<Right>', lambda x: navigate_right(root))
-    root.bind('<Button-1>', lambda x: navigate_right(root))
-
-    # Right Click and Escape to exit
-    root.bind('<Button-3>', lambda x: root.destroy())
-    root.bind('<Escape>', lambda x: root.destroy())
-
-    root.mainloop()
+    app.exec_()
