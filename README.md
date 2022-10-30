@@ -1,7 +1,7 @@
 dead-pixels
 ===============
 
-dead-pixels is a simple Python 3 program built to display full screen background colors for monitor dead pixel inspections, using the Tkinter library included with Python 3
+dead-pixels is a simple Python 3 program built to display full screen background colors for monitor dead pixel inspections, using PyQt5
 
 Build Notes
 -----
@@ -26,6 +26,7 @@ Install pip dependencies
 
 ```commandline
 pip install -r requirements.txt
+pip install -r requirements-win.txt
 ```
 
 Build as standalone executable (without spec file):
